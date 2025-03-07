@@ -56,38 +56,28 @@ const WeddingCard: React.FC<WeddingCardProps> = ({
           </div>
 
           <div className="w-full text-center mt-16">
-            <div className="flex items-center justify-center mb-6">
+            <div className="flex items-center justify-center mb-3">
               <div className="h-px bg-red-600 w-16"></div>
               <span className="mx-4 text-red-600 text-xl">•</span>
               <div className="h-px bg-red-600 w-16"></div>
             </div>
-            <h1 className="text-5xl sm:text-6xl font-script text-red-600 mb-4">
+            <h1 className="text-5xl sm:text-6xl font-script text-red-600 mb-3">
               ¡Felicidades!
             </h1>
-            <div className="flex items-center justify-center mb-6">
+            <div className="flex items-center justify-center mb-3">
               <div className="h-px bg-red-600 w-16"></div>
               <span className="mx-4 text-red-600 text-xl">•</span>
               <div className="h-px bg-red-600 w-16"></div>
             </div>
           </div>
 
-          <div className="text-center mb-8">
+          <div className="text-center mb-auto">
             <p className="text-3xl sm:text-4xl font-script text-gray-800 mb-2">
               {brideName} & {groomName}
             </p>
             <p className="text-lg font-raleway text-gray-600">{date}</p>
             <p className="mt-4 text-md font-raleway text-gray-600 italic">Próximo destino: Canadá 🍁</p>
           </div>
-
-          {/* Decorative elements */}
-          <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-red-600 opacity-30 rounded-tl-xl"></div>
-          <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-red-600 opacity-30 rounded-tr-xl"></div>
-          <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-red-600 opacity-30 rounded-bl-xl"></div>
-          <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-red-600 opacity-30 rounded-br-xl"></div>
-
-          <p className="text-sm font-raleway text-gray-500 italic mt-4 z-10">
-            Toca para abrir
-          </p>
 
           {/* Maple Leaf Icon - Bottom */}
           <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-5xl text-red-600">

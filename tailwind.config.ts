@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -74,7 +73,8 @@ export default {
 					gryffindor: '#740001',
 					forest: '#0b6623',
 					mint: '#98fb98',
-					emerald: '#50c878'
+					emerald: '#50c878',
+					deepred: '#8B0000'
 				}
 			},
 			borderRadius: {
