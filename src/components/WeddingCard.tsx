@@ -31,10 +31,10 @@ const WeddingCard: React.FC<WeddingCardProps> = ({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-4 sm:p-8">
+    <div className="flex flex-col items-center justify-center p-4 w-full">
       <div 
         className={cn(
-          "w-full max-w-2xl aspect-[5/7] relative perspective-1000 cursor-pointer",
+          "w-[96%] md:w-[80%] mx-auto aspect-[5/7] relative perspective-1000 cursor-pointer",
           "transition-all duration-500 transform-style-3d",
           isFlipped ? "rotate-y-180" : ""
         )}
@@ -45,61 +45,48 @@ const WeddingCard: React.FC<WeddingCardProps> = ({
           className={cn(
             "absolute w-full h-full backface-hidden",
             "rounded-xl shadow-2xl overflow-hidden",
-            "bg-gradient-to-br from-wedding-mint via-wedding-forest to-wedding-slytherin",
+            "bg-white border-4 border-red-600",
             "flex flex-col items-center justify-between p-8",
-            "border-2 border-wedding-gold",
             isFlipped ? "opacity-0" : "opacity-100"
           )}
         >
-          <div className="absolute inset-0 opacity-10">
-            {[...Array(20)].map((_, i) => (
-              <div 
-                key={i}
-                className="absolute rounded-full bg-white animate-sparkle"
-                style={{
-                  top: `${Math.random() * 100}%`,
-                  left: `${Math.random() * 100}%`,
-                  width: `${Math.random() * 10 + 2}px`,
-                  height: `${Math.random() * 10 + 2}px`,
-                  animationDelay: `${Math.random() * 2}s`
-                }}
-              />
-            ))}
+          {/* Maple Leaf Icon - Top */}
+          <div className="absolute top-6 left-1/2 transform -translate-x-1/2 text-5xl text-red-600">
+            🍁
           </div>
 
-          {/* Harry Potter Imagery */}
-          <div className="absolute top-4 left-4 text-3xl text-wedding-gold opacity-50">⚡</div>
-          <div className="absolute top-4 right-4 text-3xl text-wedding-gold opacity-50">⚡</div>
-          <div className="absolute bottom-4 left-4 text-3xl text-wedding-gold opacity-50">🦉</div>
-          <div className="absolute bottom-4 right-4 text-3xl text-wedding-gold opacity-50">🍁</div>
-
-          <div className="w-full text-center mt-4">
+          <div className="w-full text-center mt-16">
             <div className="flex items-center justify-center mb-6">
-              <div className="h-px bg-wedding-gold w-16"></div>
-              <span className="mx-4 text-wedding-gold text-xl">✨</span>
-              <div className="h-px bg-wedding-gold w-16"></div>
+              <div className="h-px bg-red-600 w-16"></div>
+              <span className="mx-4 text-red-600 text-xl">•</span>
+              <div className="h-px bg-red-600 w-16"></div>
             </div>
-            <h1 className="text-5xl sm:text-6xl font-script text-wedding-gold mb-4 animate-float">
+            <h1 className="text-5xl sm:text-6xl font-script text-red-600 mb-4">
               ¡Felicidades!
             </h1>
             <div className="flex items-center justify-center mb-6">
-              <div className="h-px bg-wedding-gold w-16"></div>
-              <span className="mx-4 text-wedding-gold text-xl">✨</span>
-              <div className="h-px bg-wedding-gold w-16"></div>
+              <div className="h-px bg-red-600 w-16"></div>
+              <span className="mx-4 text-red-600 text-xl">•</span>
+              <div className="h-px bg-red-600 w-16"></div>
             </div>
           </div>
 
-          <div className="text-center mb-4">
-            <p className="text-3xl sm:text-4xl font-script text-white mb-2">
+          <div className="text-center mb-8">
+            <p className="text-3xl sm:text-4xl font-script text-gray-800 mb-2">
               {brideName} & {groomName}
             </p>
-            <p className="text-lg text-wedding-mint">{date}</p>
-            <p className="mt-4 text-md text-wedding-mint italic">Próximo destino: Canadá 🍁</p>
+            <p className="text-lg text-gray-600">{date}</p>
+            <p className="mt-4 text-md text-gray-600 italic">Próximo destino: Canadá 🍁</p>
           </div>
 
-          <p className="text-sm text-white italic mt-4">
+          <p className="text-sm text-gray-500 italic mt-4">
             Toca para abrir
           </p>
+
+          {/* Maple Leaf Icon - Bottom */}
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-5xl text-red-600">
+            🍁
+          </div>
         </div>
 
         {/* Back of Card */}
@@ -107,9 +94,8 @@ const WeddingCard: React.FC<WeddingCardProps> = ({
           className={cn(
             "absolute w-full h-full backface-hidden rotate-y-180",
             "rounded-xl shadow-2xl overflow-auto",
-            "bg-gradient-to-br from-wedding-mint to-wedding-emerald",
+            "bg-white border-4 border-red-600",
             "flex flex-col items-center p-6 sm:p-8",
-            "border-2 border-wedding-gold",
             !isFlipped ? "opacity-0" : "opacity-100"
           )}
         >
@@ -127,27 +113,25 @@ const WeddingCard: React.FC<WeddingCardProps> = ({
                     e.stopPropagation();
                     handleReveal();
                   }}
-                  className="w-full py-4 bg-wedding-slytherin text-white rounded-md shadow-md hover:bg-wedding-slytherinLight transition-all font-medium animate-magic"
+                  className="w-full py-4 bg-red-600 text-white rounded-md shadow-md hover:bg-red-700 transition-all font-medium"
                 >
                   Abrir Nuestro Regalo
                 </button>
               </div>
             ) : (
-              <div className="mt-auto w-full text-center bg-wedding-slytherin bg-opacity-20 rounded-lg p-6 border border-wedding-gold">
+              <div className="mt-auto w-full text-center bg-red-50 rounded-lg p-6 border border-red-600">
                 <p className="text-gray-800 mb-2 text-lg">Tu regalo:</p>
-                <p className="text-4xl font-bold text-wedding-slytherin">{giftAmount}</p>
+                <p className="text-4xl font-bold text-red-600">{giftAmount}</p>
                 <p className="text-md text-gray-700 mt-2">Vale por {giftAmount} a cambiar con {sender}</p>
-                <p className="mt-4 italic text-sm">¡Para ayudarlos en su aventura mágica en Canadá!</p>
+                <p className="mt-4 italic text-sm">¡Para ayudarlos en su aventura en Canadá!</p>
               </div>
             )}
 
             <div className="mt-6 w-full text-center">
-              <div className="flex items-center justify-center space-x-2">
-                <div className="h-px bg-wedding-gold w-8"></div>
-                <span className="text-wedding-gold">⚡</span>
-                <div className="h-px bg-wedding-gold w-8"></div>
-                <span className="text-wedding-gold">🦉</span>
-                <div className="h-px bg-wedding-gold w-8"></div>
+              <div className="flex items-center justify-center">
+                <div className="h-px bg-red-600 w-16"></div>
+                <span className="mx-4 text-red-600">🍁</span>
+                <div className="h-px bg-red-600 w-16"></div>
               </div>
             </div>
           </div>

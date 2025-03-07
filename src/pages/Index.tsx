@@ -3,7 +3,7 @@ import WeddingCard from "@/components/WeddingCard";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-wedding-mint to-wedding-forest">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-white to-red-100">
       <WeddingCard 
         groomName="Lucas"
         brideName="Micaela"
