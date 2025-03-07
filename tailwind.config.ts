@@ -131,7 +131,8 @@ export default {
 				'magic': 'magic 4s ease-in-out infinite'
 			},
 			fontFamily: {
-				script: ['Dancing Script', 'cursive']
+				script: ['Dancing Script', 'cursive'],
+				raleway: ['Raleway', 'sans-serif']
 			}
 		}
 	},

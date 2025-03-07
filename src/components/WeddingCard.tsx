@@ -75,11 +75,17 @@ const WeddingCard: React.FC<WeddingCardProps> = ({
             <p className="text-3xl sm:text-4xl font-script text-gray-800 mb-2">
               {brideName} & {groomName}
             </p>
-            <p className="text-lg text-gray-600">{date}</p>
-            <p className="mt-4 text-md text-gray-600 italic">Próximo destino: Canadá 🍁</p>
+            <p className="text-lg font-raleway text-gray-600">{date}</p>
+            <p className="mt-4 text-md font-raleway text-gray-600 italic">Próximo destino: Canadá 🍁</p>
           </div>
 
-          <p className="text-sm text-gray-500 italic mt-4">
+          {/* Decorative elements */}
+          <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-red-600 opacity-30 rounded-tl-xl"></div>
+          <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-red-600 opacity-30 rounded-tr-xl"></div>
+          <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-red-600 opacity-30 rounded-bl-xl"></div>
+          <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-red-600 opacity-30 rounded-br-xl"></div>
+
+          <p className="text-sm font-raleway text-gray-500 italic mt-4 z-10">
             Toca para abrir
           </p>
 
@@ -101,7 +107,7 @@ const WeddingCard: React.FC<WeddingCardProps> = ({
         >
           <div className="w-full h-full flex flex-col">
             <div className="flex-grow text-center mb-6 overflow-auto">
-              <p className="whitespace-pre-line text-gray-800 font-medium leading-relaxed text-lg">
+              <p className="whitespace-pre-line font-raleway text-gray-800 font-medium leading-relaxed text-lg">
                 {message}
               </p>
             </div>
@@ -113,17 +119,17 @@ const WeddingCard: React.FC<WeddingCardProps> = ({
                     e.stopPropagation();
                     handleReveal();
                   }}
-                  className="w-full py-4 bg-red-600 text-white rounded-md shadow-md hover:bg-red-700 transition-all font-medium"
+                  className="w-full py-4 bg-red-600 text-white rounded-md shadow-md hover:bg-red-700 transition-all font-medium font-raleway"
                 >
                   Abrir Nuestro Regalo
                 </button>
               </div>
             ) : (
               <div className="mt-auto w-full text-center bg-red-50 rounded-lg p-6 border border-red-600">
-                <p className="text-gray-800 mb-2 text-lg">Tu regalo:</p>
+                <p className="font-raleway text-gray-800 mb-2 text-lg">Su regalo:</p>
                 <p className="text-4xl font-bold text-red-600">{giftAmount}</p>
-                <p className="text-md text-gray-700 mt-2">Vale por {giftAmount} a cambiar con {sender}</p>
-                <p className="mt-4 italic text-sm">¡Para ayudarlos en su aventura en Canadá!</p>
+                <p className="font-raleway text-md text-gray-700 mt-2">Vale por {giftAmount} a cambiar con {sender}</p>
+                <p className="mt-4 italic text-sm font-raleway">¡Para ayudarlos en su aventura en Canadá!</p>
               </div>
             )}
 
@@ -138,7 +144,7 @@ const WeddingCard: React.FC<WeddingCardProps> = ({
         </div>
       </div>
 
-      <div className="mt-8 text-sm text-gray-500">
+      <div className="mt-8 text-sm font-raleway text-gray-500">
         <p>Presiona la tarjeta para voltearla</p>
       </div>
     </div>
