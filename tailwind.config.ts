@@ -68,7 +68,13 @@ export default {
 					gold: '#d4af37',
 					champagne: '#f7e7ce',
 					blush: '#f8d7da',
-					ivory: '#fffff0'
+					ivory: '#fffff0',
+					slytherin: '#1a472a',
+					slytherinLight: '#2a623d',
+					gryffindor: '#740001',
+					forest: '#0b6623',
+					mint: '#98fb98',
+					emerald: '#50c878'
 				}
 			},
 			borderRadius: {
@@ -101,13 +107,28 @@ export default {
 					'0%': { opacity: '0' },
 					'50%': { opacity: '1' },
 					'100%': { opacity: '0' }
+				},
+				'magic': {
+					'0%': { 
+						boxShadow: '0 0 10px #50c878',
+						transform: 'rotate(0deg)'
+					},
+					'50%': { 
+						boxShadow: '0 0 20px #50c878, 0 0 30px #1a472a',
+						transform: 'rotate(5deg)'
+					},
+					'100%': { 
+						boxShadow: '0 0 10px #50c878',
+						transform: 'rotate(0deg)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'sparkle': 'sparkle 2s ease-in-out infinite'
+				'sparkle': 'sparkle 2s ease-in-out infinite',
+				'magic': 'magic 4s ease-in-out infinite'
 			},
 			fontFamily: {
 				script: ['Dancing Script', 'cursive']
